@@ -1,0 +1,26 @@
+{% extends 'invent/index.html' %}
+{% load crispy_forms_tags %}
+
+	{% block content %}
+	<div class = "content-section" style = "margin-top:0;margin-left: 10%; margin-right:10%;">
+  <div class = "row">	
+		<div class ="col-md-8">
+	   <form  class = "form" method = "POST",action = "" style = " width:40%; margin-left: 30%; color: white;">
+	   	{% csrf_token %}
+
+	   	<fieldset class = "form-group">
+	   		<legend class = "border-bottom mb-4">Sales</legend>
+		   	 {{ form|crispy }}
+
+	   	 </fieldset>
+
+	   	 <button class = "btn btn-primary  mt-2	 mb-2" type = 'submit'>ISSUE</button>
+
+	   </form>
+	</div>
+	</div>
+</div>
+</div>
+	{% endblock content %}
+
+l

@@ -1,0 +1,15 @@
+{% extends 'invent/index.html' %}
+
+	{% block content %}
+	<div class = "content-section" style = "margin-left: 10%; margin-right: 10%; ">
+	   <form  class = "form" method = "POST",action = "" >
+	   	{% csrf_token %}
+         <h1 style = "color: white;">Are you sure you want to delete order <strong>{{ query_set.id }}</strong></h1><br>
+	   	 <input class = "btn btn-danger  mt-2	 mb-2" type = 'submit' value = 'yes'>
+	   	 <a  href="{% url 'invent:home' %}"><div class = 'btn btn-primary'>cancel</div></a>
+
+	   </form>
+	
+</div>
+	{% endblock content %}
+

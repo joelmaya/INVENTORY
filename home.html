@@ -1,0 +1,56 @@
+
+
+ {% extends 'invent/index.html' %}
+
+
+	{% block content %}
+	
+
+<div class = 'display_table'>
+<div class = "header">
+<h1> {{ user.username }}-ORDERS </h1>
+
+<hr>
+</div>
+<table class = 'table'>
+<thead>
+<tr>
+	<th>PRODUCT</th>
+	<th>QUANTITY(BAGS)</th>
+	<th>COSTS</th>
+	<th>DELETE</th>
+	<th>UPDATE</th>
+	<th>ISSUE-OUT</th>
+</tr>
+</thead>
+{% if orders %}
+<a class = "btn btn-primary" href="{% url 'stock:order-create' %}" style="margin-bottom: 5px;">New order</a>
+{% for order in orders %}
+<tr>
+	<td>{{ order.product }}</td>
+	<td>{{ order.quantity }}</td>
+	{% if order.currency == "UGX" %}
+	<td> Shs {{ order.get_total }}</td>
+	{% else%}
+	<td>DRS {{ order.get_total }}</td>
+	{% endif %}
+	<td><a class ='btn btn-danger' href="{% url 'stock:delete' order.id %}">Delete</a></td>
+	<td> <a class ='btn btn-primary' href="{% url 'stock:update_item' order.id %}">Update</a></td>
+	<td><a href="{% url 'stock:issue_item' order.id %}"><div class = 'btn btn-danger'>ISSUE ITEM</div></a></td>
+</tr>
+
+{% endfor %}
+{% else %}
+<h3>You don't have order yet!</h3>
+<a class = "btn btn-primary" href="{% url 'stock:order-create' %}" style="margin-bottom: 5px;">Place order</a>
+{% endif %}	
+</table>
+</div>
+	
+{% endblock content %}
+
+
+
+
+
+

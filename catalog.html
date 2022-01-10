@@ -1,0 +1,60 @@
+{% extends 'invent/index.html' %}
+{% load static %}
+
+{% block content %}
+
+        <!-- Masthead-->
+        <header class="masthead" style="background: url('/static/images/maize.jpg') 50% 0 no-repeat; background-size: cover;background-attachment: fixed;">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">Fortified maize flour</h1>
+                        <hr class="divider" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 mb-5"><img src="{% static 'images/edit-no1.png' %}" style="height: 40%; width: 40%;"></p>
+                        <a class="btn btn-primary btn-x1" href="#about" style="width:30%;">About Us!</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="page-section" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class ="row" style ="text-align: center;">
+                    <h1>ABOUT NOURIA FLOUR</h1>
+                </div>
+                <div class="row gx-4 gx-lg-5 justify-content-left">
+                    <div class="col-lg-8 text-left" style="margin-top: 10%;">
+                        <p class="text-black-75 mb-4">Nouria flour is a corn product enriched with vitamins and minerals for your 
+                        basic dietary needs.In African culture corns flour is a food of choice that accompanies many traditional 
+                        and modern dishes , it makes corn flour one of the most consumed food in the world</p>
+                        <p class="text-black-75-4">The goal is to provide you with superior quality flour for your current food needs  at affordable price for all social layers whether in urban or rural areas, we will work 24/7 to achieve this goal and thus satisfy the demand of all our esteemed customers.</p>
+                    </div>
+                        <div class="col-lg-4 text-right">
+                        <img src="{% static 'images/edit-bag1.png' %}" style="height: 100%; width: 100%; margin-top: 5%;">
+                    </div>
+                </div>
+            </div>
+       
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-left" style="margin-top: 2%;">
+                    <div class="col-lg-4 text-right">
+                        <img src="{% static 'images/edit-bag1.png' %}" style="height: 100%; width: 100%; margin-top: 5%;">
+                    </div>
+                    <div class="col-lg-8 text-left" style="margin-top:5%;">
+                        <p>The innovation nature of the project is that it will not only contribute to the creations of jobs in various value chains  but also Nouria Flour will contribute to the good nutrition of our esteemed populations due to its nutritionals quality which which will prevent alot of sickness </p>
+                        <p>We aim to do a mass distribution in the DRC and in Uganda.Our product and packaging is made in Uganda under sister company NOURIA GROUP LIMITED</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+	
+{% endblock content %}
+
+
+
+
+
+
